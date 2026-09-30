@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fahad Ashraf Sumar – Profile</title>
+  <meta name="description" content="Personal profile of Fahad Ashraf Sumar.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">Fahad<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" class="theme-btn" aria-label="Toggle light/dark theme">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero reveal">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Fahad Ashraf Sumar</h1>
+      <p class="lead">Your headline goes here – e.g. “IT professional passionate about building reliable systems.”</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h2>About me</h2>
+      <div class="about">
+        <div class="avatar" aria-hidden="true">FS</div>
+        <p>Write a short bio here: who you are, what you do, what you're learning and what you care about. Replace this placeholder text with your own words.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>Skill one</li><li>Skill two</li><li>Skill three</li>
+        <li>Skill four</li><li>Skill five</li><li>Skill six</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card"><h3>Project one</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
+        <article class="card"><h3>Project two</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
+        <article class="card"><h3>Project three</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <p>Want to work together or just say hi?</p>
+      <p><a class="btn primary" href="mailto:fahad.ashraf.sumar@gmail.com">fahad.ashraf.sumar@gmail.com</a>
+         <a class="btn" href="https://github.com/fahadashrafsumar">GitHub</a></p>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Fahad Ashraf Sumar</footer>
+  <script src="script.js"></script>
+</body>
+</html>
