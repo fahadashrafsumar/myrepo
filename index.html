@@ -48,17 +48,27 @@
     <section id="skills" class="reveal">
       <h2>Skills</h2>
       <ul class="tags">
-        <li>Skill one</li><li>Skill two</li><li>Skill three</li>
-        <li>Skill four</li><li>Skill five</li><li>Skill six</li>
+        <li>Self-hosting &amp; deploying LLMs</li><li>Containerization</li><li>Linux server administration</li><li>Privacy-first, sandboxed system design</li><li>Performance testing &amp; hardware sizing</li><li>Business case writing &amp; AI roadmap planning</li><li>Presenting technical proposals to management</li>
+      </ul>
+      <h3 class="sub">Tools &amp; technologies</h3>
+      <ul class="tags">
+        <li>Ollama</li><li>Docker</li><li>Ubuntu Linux</li><li>Open WebUI</li><li>Gemma 4</li><li>RAG</li>
       </ul>
     </section>
 
     <section id="projects" class="reveal">
       <h2>Projects</h2>
       <div class="cards">
-        <article class="card"><h3>Project one</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
-        <article class="card"><h3>Project two</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
-        <article class="card"><h3>Project three</h3><p>Short description of what it does and what you used.</p><a href="#">View →</a></article>
+        <article class="card featured">
+          <span class="badge">Proof of concept</span>
+          <h3>Private AI Server</h3>
+          <p>To keep AI use inside the organisation's network for data-privacy reasons, I designed and deployed a self-hosted LLM platform in a sandboxed environment. It runs Ollama in a Docker container on Ubuntu Linux, with Open WebUI as the front end and Gemma 4 as the model.</p>
+          <p>The CPU-only prototype (Intel Xeon Gold) showed that a private AI assistant can run entirely in-house. Testing of response times and retrieval-augmented generation (RAG) made clear that GPU acceleration is needed before production. I used these findings to build a business case for a phased AI roadmap, starting with an NVIDIA RTX 5090 (32&nbsp;GB) for the next testing phase.</p>
+          <ul class="tags small">
+            <li>Ollama</li><li>Docker</li><li>Ubuntu Linux</li><li>Open WebUI</li>
+            <li>Gemma 4</li><li>RAG</li><li>Intel Xeon Gold</li><li>NVIDIA RTX 5090 (proposed)</li>
+          </ul>
+        </article>
       </div>
     </section>
 
