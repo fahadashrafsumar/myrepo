@@ -1,6 +1,46 @@
 [
-  {"id":"lic-001","name":"Example Antivirus Suite","vendor":"Example Vendor A","seats":50,"owner":"IT Operations","purchased":"2025-03-01","expiry":"2026-03-01","cost":1200,"notes":"Sample data"},
-  {"id":"lic-002","name":"Example Backup Software","vendor":"Example Vendor B","seats":10,"owner":"Infrastructure","purchased":"2025-11-15","expiry":"2026-11-15","cost":3400,"notes":"Sample data"},
-  {"id":"lic-003","name":"Example Design Tool","vendor":"Example Vendor C","seats":5,"owner":"Marketing","purchased":"2025-10-20","expiry":"2026-10-20","cost":650,"notes":"Sample data"},
-  {"id":"lic-004","name":"Example Monitoring Platform","vendor":"Example Vendor D","seats":1,"owner":"Infrastructure","purchased":"2026-01-10","expiry":"2027-01-10","cost":2100,"notes":"Sample data"}
+  {
+    "id": "lic-001",
+    "name": "Example Antivirus Suite",
+    "vendor": "Example Vendor A",
+    "seats": 50,
+    "owner": "IT Operations",
+    "purchased": "2025-03-01",
+    "expiry": "2026-11-01",
+    "cost": 1200,
+    "notes": "Sample data"
+  },
+  {
+    "id": "lic-002",
+    "name": "Example Backup Software",
+    "vendor": "Example Vendor B",
+    "seats": 10,
+    "owner": "Infrastructure",
+    "purchased": "2025-11-15",
+    "expiry": "2026-11-15",
+    "cost": 3400,
+    "notes": "Sample data"
+  },
+  {
+    "id": "lic-003",
+    "name": "Example Design Tool",
+    "vendor": "Example Vendor C",
+    "seats": 5,
+    "owner": "Marketing",
+    "purchased": "2025-10-20",
+    "expiry": "2026-10-20",
+    "cost": 650,
+    "notes": "Sample data"
+  },
+  {
+    "id": "lic-004",
+    "name": "Example Monitoring Platform",
+    "vendor": "Example Vendor D",
+    "seats": 1,
+    "owner": "Infrastructure",
+    "purchased": "2026-01-10",
+    "expiry": "2027-01-10",
+    "cost": 2100,
+    "notes": "Sample data"
+  }
 ]
