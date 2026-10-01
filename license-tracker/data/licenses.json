@@ -6,7 +6,7 @@
     "seats": 50,
     "owner": "IT Operations",
     "purchased": "2025-03-01",
-    "expiry": "2026-11-01",
+    "expiry": "2026-10-01",
     "cost": 1200,
     "notes": "Sample data"
   },
@@ -28,7 +28,7 @@
     "seats": 5,
     "owner": "Marketing",
     "purchased": "2025-10-20",
-    "expiry": "2026-10-20",
+    "expiry": "2026-08-20",
     "cost": 650,
     "notes": "Sample data"
   },
