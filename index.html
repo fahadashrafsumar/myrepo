@@ -54,6 +54,18 @@
       <h2>Skills</h2>
       <div class="skill-groups">
         <div class="skill-group">
+          <h3>Containers, cloud &amp; AI</h3>
+          <ul class="tags small"><li>Docker</li><li>Docker Compose</li><li>Kubernetes (RKE2)</li><li>Microsoft Entra ID</li><li>Microsoft Graph</li><li>Ollama</li><li>Open WebUI</li><li>Gemma</li><li>RAG</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Automation</h3>
+          <ul class="tags small"><li>PowerShell</li><li>Scheduled reporting</li><li>Postfix mail relay</li><li>Microsoft 365</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web development</h3>
+          <ul class="tags small"><li>Python</li><li>FastAPI</li><li>HTMX</li><li>Django</li><li>PostgreSQL</li><li>Nginx</li><li>Caddy</li><li>HTML, CSS &amp; JavaScript</li></ul>
+        </div>
+        <div class="skill-group">
           <h3>Infrastructure &amp; virtualization</h3>
           <ul class="tags small"><li>VMware vSphere / ESXi</li><li>HPE ProLiant servers</li><li>Windows Server</li><li>Linux (Ubuntu, Rocky Linux)</li><li>Active Directory</li><li>Group Policy</li></ul>
         </div>
@@ -66,18 +78,6 @@
           <ul class="tags small"><li>Next-generation firewalls</li><li>Site-to-site VPN</li><li>Central firewall management</li><li>Vulnerability remediation</li><li>Patch management (WSUS)</li><li>Endpoint protection</li><li>Least-privilege AD design</li><li>SOC log collection</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Automation</h3>
-          <ul class="tags small"><li>PowerShell</li><li>Scheduled reporting</li><li>Postfix mail relay</li><li>Microsoft 365</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3>Containers, cloud &amp; AI</h3>
-          <ul class="tags small"><li>Docker</li><li>Docker Compose</li><li>Kubernetes (RKE2)</li><li>Microsoft Entra ID</li><li>Microsoft Graph</li><li>Ollama</li><li>Open WebUI</li><li>Gemma</li><li>RAG</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3>Web development</h3>
-          <ul class="tags small"><li>Python</li><li>FastAPI</li><li>HTMX</li><li>Django</li><li>PostgreSQL</li><li>Nginx</li><li>Caddy</li><li>HTML, CSS &amp; JavaScript</li></ul>
-        </div>
-        <div class="skill-group">
           <h3>Process &amp; leadership</h3>
           <ul class="tags small"><li>SOPs &amp; runbooks</li><li>KPI &amp; KRI frameworks</li><li>Operational level agreements</li><li>IT roadmapping</li><li>Regulatory asset inventory</li><li>Business cases</li><li>Technical training</li></ul>
         </div>
@@ -86,6 +86,60 @@
 
     <section id="projects" class="reveal">
       <h2>Projects</h2>
+      <h3 class="group">Applications &amp; AI</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Private On-Prem AI Server</h3>
+          <p>Deployed a private AI server so AI use stays inside the organization&#x27;s perimeter for data privacy. Also experimented with RAG and built the case for a GPU and a phased AI roadmap.</p>
+          <ul class="tags small"><li>Ollama</li><li>Open WebUI</li><li>Gemma</li><li>Docker</li><li>Ubuntu</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress (architecture done)</span>
+          <h3>IT Operations Web App</h3>
+          <p>Designing an internal web app for the infrastructure team covering inventory, expiry tracking (licenses, SLAs, SSL certificates) and notifications. Built as a modular monolith on Docker Compose, with single sign-on, audit logging, and push-based data ingest so the app holds no infrastructure credentials.</p>
+          <ul class="tags small"><li>Python</li><li>FastAPI</li><li>HTMX</li><li>PostgreSQL</li><li>Nginx</li><li>Docker Compose</li><li>Microsoft Entra ID</li><li>Microsoft Graph</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress (milestone 1 built)</span>
+          <h3>IT Request Forms App</h3>
+          <p>Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.</p>
+          <ul class="tags small"><li>Django</li><li>Caddy</li><li>PostgreSQL</li><li>Docker</li></ul>
+        </article>
+      </div>
+      <h3 class="group">Automation</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Daily Backup Verification</h3>
+          <p>Replaced a manual daily check with a script that confirms backups have landed on backup storage and emails a daily report automatically.</p>
+          <ul class="tags small"><li>PowerShell</li></ul>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Weekly Patch-Compliance Report</h3>
+          <p>Automated a weekly export of workstation patch status, which the support team uses to resolve pending updates and update errors on their own.</p>
+          <ul class="tags small"><li>PowerShell</li><li>WSUS</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Verify-Then-Purge Backup Scripts</h3>
+          <p>Replacing copy-only backup scripts with ones that delete old local backups only after confirming the copy exists on backup storage, then email the result.</p>
+          <ul class="tags small"><li>PowerShell</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Internal Email Relay</h3>
+          <p>Set up a Linux mail relay so servers, network devices and scripts can send alert emails through Microsoft 365 without each one holding credentials.</p>
+          <ul class="tags small"><li>Postfix</li><li>Linux</li><li>Microsoft 365</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Storage Retention Automation</h3>
+          <p>Set up daily automated retention cleanup so shared folders maintain themselves instead of being cleared by hand.</p>
+          <ul class="tags small"><li>NAS scheduling</li></ul>
+        </article>
+      </div>
       <h3 class="group">Infrastructure &amp; Disaster Recovery</h3>
       <div class="cards">
         <article class="card">
@@ -171,60 +225,6 @@
           <span class="status progress">In progress</span>
           <h3>Regulatory Asset Inventory</h3>
           <p>Building a classified inventory of infrastructure assets across primary and DR sites for regulatory submission.</p>
-        </article>
-      </div>
-      <h3 class="group">Automation</h3>
-      <div class="cards">
-        <article class="card">
-          <span class="status live">Live</span>
-          <h3>Daily Backup Verification</h3>
-          <p>Replaced a manual daily check with a script that confirms backups have landed on backup storage and emails a daily report automatically.</p>
-          <ul class="tags small"><li>PowerShell</li></ul>
-        </article>
-        <article class="card">
-          <span class="status live">Live</span>
-          <h3>Weekly Patch-Compliance Report</h3>
-          <p>Automated a weekly export of workstation patch status, which the support team uses to resolve pending updates and update errors on their own.</p>
-          <ul class="tags small"><li>PowerShell</li><li>WSUS</li></ul>
-        </article>
-        <article class="card">
-          <span class="status progress">In progress</span>
-          <h3>Verify-Then-Purge Backup Scripts</h3>
-          <p>Replacing copy-only backup scripts with ones that delete old local backups only after confirming the copy exists on backup storage, then email the result.</p>
-          <ul class="tags small"><li>PowerShell</li></ul>
-        </article>
-        <article class="card">
-          <span class="status progress">In progress</span>
-          <h3>Internal Email Relay</h3>
-          <p>Set up a Linux mail relay so servers, network devices and scripts can send alert emails through Microsoft 365 without each one holding credentials.</p>
-          <ul class="tags small"><li>Postfix</li><li>Linux</li><li>Microsoft 365</li></ul>
-        </article>
-        <article class="card">
-          <span class="status done">Done</span>
-          <h3>Storage Retention Automation</h3>
-          <p>Set up daily automated retention cleanup so shared folders maintain themselves instead of being cleared by hand.</p>
-          <ul class="tags small"><li>NAS scheduling</li></ul>
-        </article>
-      </div>
-      <h3 class="group">Applications &amp; AI</h3>
-      <div class="cards">
-        <article class="card">
-          <span class="status done">Done</span>
-          <h3>Private On-Prem AI Server</h3>
-          <p>Deployed a private AI server so AI use stays inside the organization&#x27;s perimeter for data privacy. Also experimented with RAG and built the case for a GPU and a phased AI roadmap.</p>
-          <ul class="tags small"><li>Ollama</li><li>Open WebUI</li><li>Gemma</li><li>Docker</li><li>Ubuntu</li></ul>
-        </article>
-        <article class="card">
-          <span class="status progress">In progress (architecture done)</span>
-          <h3>IT Operations Web App</h3>
-          <p>Designing an internal web app for the infrastructure team covering inventory, expiry tracking (licenses, SLAs, SSL certificates) and notifications. Built as a modular monolith on Docker Compose, with single sign-on, audit logging, and push-based data ingest so the app holds no infrastructure credentials.</p>
-          <ul class="tags small"><li>Python</li><li>FastAPI</li><li>HTMX</li><li>PostgreSQL</li><li>Nginx</li><li>Docker Compose</li><li>Microsoft Entra ID</li><li>Microsoft Graph</li></ul>
-        </article>
-        <article class="card">
-          <span class="status progress">In progress (milestone 1 built)</span>
-          <h3>IT Request Forms App</h3>
-          <p>Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.</p>
-          <ul class="tags small"><li>Django</li><li>Caddy</li><li>PostgreSQL</li><li>Docker</li></ul>
         </article>
       </div>
       <h3 class="group">Process &amp; Documentation</h3>
