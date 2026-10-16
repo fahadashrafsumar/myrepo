@@ -19,8 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Collect site files (skip docs, repo config)
+        run: |
+          mkdir _site
+          git ls-files | grep -vE '^\.git|\.md$' | xargs -I{} cp --parents {} _site/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
