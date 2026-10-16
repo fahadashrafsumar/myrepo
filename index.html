@@ -21,6 +21,7 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#demo">Demo</a>
       <a href="#contact">Contact</a>
       <button id="themeBtn" class="theme-btn" aria-label="Toggle light/dark theme">◐</button>
     </nav>
@@ -41,7 +42,11 @@
       <h2>About me</h2>
       <div class="about">
         <div class="avatar" aria-hidden="true">FS</div>
-        <p>Write a short bio here: who you are, what you do, what you're learning and what you care about. Replace this placeholder text with your own words.</p>
+        <div class="bio">
+          <p>I’m Fahad, an infrastructure guy from Karachi with 7 years of keeping servers, networks and backups alive. It’s the kind of work nobody notices until it breaks. These days I manage IT infrastructure and networks for a large organization, where I’ve moved an entire DR site, led a big security remediation push, and replaced a lot of “someone checks this by hand every morning” with scripts that do it for me.</p>
+          <p>Lately I’ve been on a mission to drag on-prem infrastructure into the modern world: containers, Kubernetes, Azure, and self-hosted AI that keeps company data where it belongs. I’m studying for AZ-104, building internal web apps nobody asked me to build, and running LLMs on hardware that really wishes it had a GPU.</p>
+          <p>If it can be automated, I’ll probably automate it. If it can’t, I’ll probably try anyway.</p>
+        </div>
       </div>
     </section>
 
@@ -58,19 +63,199 @@
 
     <section id="projects" class="reveal">
       <h2>Projects</h2>
+      <h3 class="group">Infrastructure &amp; Disaster Recovery</h3>
       <div class="cards">
-        <article class="card featured">
-          <span class="badge">Proof of concept</span>
-          <h3>Private AI Server</h3>
-          <p>To keep AI use inside the organisation's network for data-privacy reasons, I designed and deployed a self-hosted LLM platform in a sandboxed environment. It runs Ollama in a Docker container on Ubuntu Linux, with Open WebUI as the front end and Gemma 4 as the model.</p>
-          <p>The CPU-only prototype (Intel Xeon Gold) showed that a private AI assistant can run entirely in-house. Testing of response times and retrieval-augmented generation (RAG) made clear that GPU acceleration is needed before production. I used these findings to build a business case for a phased AI roadmap, starting with an NVIDIA RTX 5090 (32&nbsp;GB) for the next testing phase.</p>
-          <ul class="tags small">
-            <li>Ollama</li><li>Docker</li><li>Ubuntu Linux</li><li>Open WebUI</li>
-            <li>Gemma 4</li><li>RAG</li><li>Intel Xeon Gold</li><li>NVIDIA RTX 5090 (proposed)</li>
-          </ul>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>DR Site Migration to Colocation Data Center</h3>
+          <p>Migrated the organization&#x27;s disaster recovery site to a colocation data center, including infrastructure replication and DR planning, with minimal disruption to DR functions. The work was recognized by senior leadership.</p>
+          <ul class="tags small"><li>VMware vSphere</li><li>Veeam Backup &amp; Replication</li></ul>
         </article>
-        <article class="card featured">
-          <span class="badge">Live demo</span>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>DR Drill Program</h3>
+          <p>Leading the next disaster recovery drill and building the full document set: a management-facing drill plan, an execution runbook, pre/during/post checklists, and a final report template.</p>
+          <ul class="tags small"><li>Veeam</li><li>VMware vSphere</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Host Server Rollout</h3>
+          <p>Led the deployment of new host servers across the primary and DR data centers.</p>
+          <ul class="tags small"><li>HPE ProLiant</li><li>VMware ESXi</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Backup Storage Upgrade</h3>
+          <p>Replaced backup storage with a higher-capacity unit and cut over the backup sync jobs so database backups kept flowing to secondary and DR copies with no data loss.</p>
+          <ul class="tags small"><li>NAS</li><li>backup sync</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Branch VPN Migration</h3>
+          <p>Migrated branch site-to-site VPNs to new connectivity providers, jointly with the network team.</p>
+          <ul class="tags small"><li>Next-generation firewalls</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Centralized Firewall Management</h3>
+          <p>Bringing the branch firewall estate under central management so policies can be pushed consistently from one place.</p>
+          <ul class="tags small"><li>Central firewall management platform</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Kubernetes Proof of Concept</h3>
+          <p>Built a single-node Kubernetes cluster as a learning and proof-of-concept platform for containerized workloads.</p>
+          <ul class="tags small"><li>RKE2</li><li>Rocky Linux</li></ul>
+        </article>
+      </div>
+      <h3 class="group">Security &amp; Compliance</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Vulnerability Remediation Program</h3>
+          <p>Led remediation of findings from internal vulnerability assessments across Windows, Linux and appliance hosts, prioritizing by severity. Focused on root-cause patching, where one fix often cleared many findings, and trained the support team to keep endpoint security healthy going forward.</p>
+          <ul class="tags small"><li>Endpoint protection</li><li>WSUS</li><li>Windows Server</li><li>Linux</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Active Directory Least-Privilege Redesign</h3>
+          <p>Redesigned admin delegation in Active Directory onto a tiered, least-privilege model and documented the final state for leadership and the team.</p>
+          <ul class="tags small"><li>Active Directory</li><li>PowerShell</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Patch Management Coverage</h3>
+          <p>Brought servers and workstations under centralized patch management.</p>
+          <ul class="tags small"><li>WSUS</li><li>Group Policy</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Endpoint Security Handover</h3>
+          <p>Handed day-to-day endpoint protection monitoring to the support team with role setup, a task guide, a live demo and daily report emails.</p>
+          <ul class="tags small"><li>Endpoint protection platform</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>SOC Log Collection</h3>
+          <p>Deployed log collection to a managed security operations center and coordinated log onboarding with third-party providers.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Infrastructure Improvement Register</h3>
+          <p>Created a register of infrastructure improvement items and have been driving them to closure.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Regulatory Asset Inventory</h3>
+          <p>Building a classified inventory of infrastructure assets across primary and DR sites for regulatory submission.</p>
+        </article>
+      </div>
+      <h3 class="group">Automation</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Daily Backup Verification</h3>
+          <p>Replaced a manual daily check with a script that confirms backups have landed on backup storage and emails a daily report automatically.</p>
+          <ul class="tags small"><li>PowerShell</li></ul>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Weekly Patch-Compliance Report</h3>
+          <p>Automated a weekly export of workstation patch status, which the support team uses to resolve pending updates and update errors on their own.</p>
+          <ul class="tags small"><li>PowerShell</li><li>WSUS</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Verify-Then-Purge Backup Scripts</h3>
+          <p>Replacing copy-only backup scripts with ones that delete old local backups only after confirming the copy exists on backup storage, then email the result.</p>
+          <ul class="tags small"><li>PowerShell</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Internal Email Relay</h3>
+          <p>Set up a Linux mail relay so servers, network devices and scripts can send alert emails through Microsoft 365 without each one holding credentials.</p>
+          <ul class="tags small"><li>Postfix</li><li>Linux</li><li>Microsoft 365</li></ul>
+        </article>
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Storage Retention Automation</h3>
+          <p>Set up daily automated retention cleanup so shared folders maintain themselves instead of being cleared by hand.</p>
+          <ul class="tags small"><li>NAS scheduling</li></ul>
+        </article>
+      </div>
+      <h3 class="group">Applications &amp; AI</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>Private On-Prem AI Server</h3>
+          <p>Deployed a private AI server so AI use stays inside the organization&#x27;s perimeter for data privacy. Also experimented with RAG and built the case for a GPU and a phased AI roadmap.</p>
+          <ul class="tags small"><li>Ollama</li><li>Open WebUI</li><li>Gemma</li><li>Docker</li><li>Ubuntu</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress (architecture done)</span>
+          <h3>IT Operations Web App</h3>
+          <p>Designing an internal web app for the infrastructure team covering inventory, expiry tracking (licenses, SLAs, SSL certificates) and notifications. Built as a modular monolith on Docker Compose, with single sign-on, audit logging, and push-based data ingest so the app holds no infrastructure credentials.</p>
+          <ul class="tags small"><li>Python</li><li>FastAPI</li><li>HTMX</li><li>PostgreSQL</li><li>Nginx</li><li>Docker Compose</li><li>Microsoft Entra ID</li><li>Microsoft Graph</li></ul>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress (milestone 1 built)</span>
+          <h3>IT Request Forms App</h3>
+          <p>Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.</p>
+          <ul class="tags small"><li>Django</li><li>Caddy</li><li>PostgreSQL</li><li>Docker</li></ul>
+        </article>
+      </div>
+      <h3 class="group">Process &amp; Documentation</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>IT KPI &amp; KRI Framework</h3>
+          <p>Building the IT department&#x27;s KPI and KRI framework across People, Process and Technology.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>IT Operational Level Agreement</h3>
+          <p>Drafting the IT department&#x27;s OLA with business and support departments.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>Standardized SOP Set</h3>
+          <p>Writing, reviewing and standardizing infrastructure SOPs (backup and restore, VM deployment, GPO deployment, approved software, network and VPN administration, user account management), plus a support tier and escalation matrix.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">In progress</span>
+          <h3>IT Infrastructure Roadmap</h3>
+          <p>Added infrastructure projects and timelines to the IT steering committee&#x27;s project roadmap.</p>
+        </article>
+      </div>
+      <h3 class="group">People &amp; Training</h3>
+      <div class="cards">
+        <article class="card">
+          <span class="status done">Done</span>
+          <h3>New-Staff IT Onboarding</h3>
+          <p>Built an IT onboarding deck and delivered the training to new staff across multiple batches, with positive feedback from the Training department.</p>
+        </article>
+        <article class="card">
+          <span class="status progress">Ongoing</span>
+          <h3>Team Knowledge Sessions</h3>
+          <p>Run knowledge-sharing sessions for the support team on infrastructure concepts beyond day-to-day fixes.</p>
+        </article>
+      </div>
+      <h3 class="group">Learning</h3>
+      <ul class="learning">
+        <li><strong>AZ-900 (Azure Fundamentals)</strong> <span>In progress</span></li>
+        <li><strong>AZ-104 (Azure Administrator)</strong> <span>In progress</span></li>
+        <li><strong>Kubernetes certification</strong> <span>In progress</span></li>
+        <li><strong>CCNA</strong> <span>Coursework completed</span></li>
+        <li><strong>VCP-DCV</strong> <span>Coursework completed</span></li>
+        <li><strong>Docker</strong> <span>Hands-on labs (single containers, Compose stacks, custom images)</span></li>
+      </ul>
+    </section>
+
+    <section id="demo" class="reveal">
+      <h2>Demo</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="status live">Live demo</span>
           <h3>License Expiry Tracker</h3>
           <p>A browser-based tracker for software license expiry dates, with colour-coded status, search, sorting, CSV/JSON export, and data stored as a JSON file in the repo. Sample data only.</p>
           <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub API</li></ul>
