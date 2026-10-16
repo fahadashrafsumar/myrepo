@@ -133,11 +133,6 @@ Designing an internal web app for the infrastructure team covering inventory, ex
 Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.
 **Tools:** Django, Caddy, PostgreSQL, Docker
 
-### Source Control for Company Code
-**Status:** Planned
-Setting up Git-based source control for application code.
-**Tools:** Git
-
 ---
 
 ## Process & Documentation
@@ -169,10 +164,6 @@ Built an IT onboarding deck and delivered the training to new staff across multi
 ### Team Knowledge Sessions
 **Status:** Ongoing
 Run knowledge-sharing sessions for the support team on infrastructure concepts beyond day-to-day fixes.
-
-### Hiring
-**Status:** Done
-Took part in hiring system administrators: interviews, job posts, and reviewing job descriptions.
 
 ---
 
