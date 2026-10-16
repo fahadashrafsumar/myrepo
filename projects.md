@@ -8,7 +8,56 @@ Content source for the Projects section of the profile site.
 - Never name the employer, its industry, its people or its vendors and service providers.
 - Never add IP addresses, hostnames, internal domain names, server names, account names or file paths.
 - Never mention open vulnerabilities, unresolved security gaps or specific weaknesses. Describe the work, not the environment's weak spots.
+- Order matters: sections and entries appear on the site in the order listed here, latest and most notable first.
 - Status values: **Done**, **Live**, **In progress**, **Planned**.
+
+---
+
+## Applications & AI
+
+### Private On-Prem AI Server
+**Status:** Done
+Deployed a private AI server so AI use stays inside the organization's perimeter for data privacy. Also experimented with RAG and built the case for a GPU and a phased AI roadmap.
+**Tools:** Ollama, Open WebUI, Gemma, Docker, Ubuntu
+
+### IT Operations Web App
+**Status:** In progress (architecture done)
+Designing an internal web app for the infrastructure team covering inventory, expiry tracking (licenses, SLAs, SSL certificates) and notifications. Built as a modular monolith on Docker Compose, with single sign-on, audit logging, and push-based data ingest so the app holds no infrastructure credentials.
+**Tools:** Python, FastAPI, HTMX, PostgreSQL, Nginx, Docker Compose, Microsoft Entra ID, Microsoft Graph
+
+### IT Request Forms App
+**Status:** In progress (milestone 1 built)
+Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.
+**Tools:** Django, Caddy, PostgreSQL, Docker
+
+---
+
+## Automation
+
+### Daily Backup Verification
+**Status:** Live
+Replaced a manual daily check with a script that confirms backups have landed on backup storage and emails a daily report automatically.
+**Tools:** PowerShell
+
+### Weekly Patch-Compliance Report
+**Status:** Live
+Automated a weekly export of workstation patch status, which the support team uses to resolve pending updates and update errors on their own.
+**Tools:** PowerShell, WSUS
+
+### Verify-Then-Purge Backup Scripts
+**Status:** In progress
+Replacing copy-only backup scripts with ones that delete old local backups only after confirming the copy exists on backup storage, then email the result.
+**Tools:** PowerShell
+
+### Internal Email Relay
+**Status:** In progress
+Set up a Linux mail relay so servers, network devices and scripts can send alert emails through Microsoft 365 without each one holding credentials.
+**Tools:** Postfix, Linux, Microsoft 365
+
+### Storage Retention Automation
+**Status:** Done
+Set up daily automated retention cleanup so shared folders maintain themselves instead of being cleared by hand.
+**Tools:** NAS scheduling
 
 ---
 
@@ -84,54 +133,6 @@ Created a register of infrastructure improvement items and have been driving the
 ### Regulatory Asset Inventory
 **Status:** In progress
 Building a classified inventory of infrastructure assets across primary and DR sites for regulatory submission.
-
----
-
-## Automation
-
-### Daily Backup Verification
-**Status:** Live
-Replaced a manual daily check with a script that confirms backups have landed on backup storage and emails a daily report automatically.
-**Tools:** PowerShell
-
-### Weekly Patch-Compliance Report
-**Status:** Live
-Automated a weekly export of workstation patch status, which the support team uses to resolve pending updates and update errors on their own.
-**Tools:** PowerShell, WSUS
-
-### Verify-Then-Purge Backup Scripts
-**Status:** In progress
-Replacing copy-only backup scripts with ones that delete old local backups only after confirming the copy exists on backup storage, then email the result.
-**Tools:** PowerShell
-
-### Internal Email Relay
-**Status:** In progress
-Set up a Linux mail relay so servers, network devices and scripts can send alert emails through Microsoft 365 without each one holding credentials.
-**Tools:** Postfix, Linux, Microsoft 365
-
-### Storage Retention Automation
-**Status:** Done
-Set up daily automated retention cleanup so shared folders maintain themselves instead of being cleared by hand.
-**Tools:** NAS scheduling
-
----
-
-## Applications & AI
-
-### Private On-Prem AI Server
-**Status:** Done
-Deployed a private AI server so AI use stays inside the organization's perimeter for data privacy. Also experimented with RAG and built the case for a GPU and a phased AI roadmap.
-**Tools:** Ollama, Open WebUI, Gemma, Docker, Ubuntu
-
-### IT Operations Web App
-**Status:** In progress (architecture done)
-Designing an internal web app for the infrastructure team covering inventory, expiry tracking (licenses, SLAs, SSL certificates) and notifications. Built as a modular monolith on Docker Compose, with single sign-on, audit logging, and push-based data ingest so the app holds no infrastructure credentials.
-**Tools:** Python, FastAPI, HTMX, PostgreSQL, Nginx, Docker Compose, Microsoft Entra ID, Microsoft Graph
-
-### IT Request Forms App
-**Status:** In progress (milestone 1 built)
-Replacing paper forms for VM creation, VM deletion and network access requests with web forms. Includes directory-based login, an append-only audit log, and a health endpoint for monitoring.
-**Tools:** Django, Caddy, PostgreSQL, Docker
 
 ---
 
